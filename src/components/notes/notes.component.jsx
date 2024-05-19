@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { collection, getDocs } from "firebase/firestore"
 import { db } from '../../firebase/utils.firebase';
 
+import Form from '../form/form.component';
+
 import './notes.styles.css'
 
 const Notes = () => {
@@ -35,6 +37,7 @@ const Notes = () => {
                     ))
                 }
             </div>
+            <Form />
         </>
     )
 }
