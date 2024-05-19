@@ -1,36 +1,35 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+
+import { collection, addDoc } from "firebase/firestore";
+import {db} from '../../firebase/utils.firebase';
 
 import './form.styles.css'
 
 function Form() {
-  const [inputValue, setInputValue] = useState('React Engineering');
+  const [note, setNote] = useState('');
 
-  const handleInputChange = (e) => {
-    const value = e.target.value;
-    setInputValue(value)
-  }
-
-  const handleSubmit = (e) => {
+  const addNote = async (e) => {
     e.preventDefault();
 
-    const newNote = e.target.value;
-    console.log(newNote)
+    try {
+      const docRef = await addDoc(collection(db, "notes"), {
+        note: note,
+      });
+      console.log("Document written with ID:", docRef.id);
+    } catch (e) {
+      console.log("Error adding document: ", e)
+    }
   }
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
         <input 
           type='text' 
           size='50' 
           className='form-input' 
-          value={inputValue}
-          onChange={handleInputChange}
+          onChange={(e)=>setNote(e.target.value)}
         />
-        <button type="submit">Submit</button>
-        <Link to='/notes' className="links">Notes</Link>
-      </form>
+        <button type="submit" onClick={addNote}>Submit</button>
     </>
   );
 }
