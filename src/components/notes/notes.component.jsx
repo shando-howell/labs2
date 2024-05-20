@@ -11,6 +11,7 @@ const Notes = () => {
  
     const fetchNote = async () => {
        
+        // Get the data from the Firestore database
         await getDocs(collection(db, "notes"))
             .then((querySnapshot)=>{               
                 const newNote= querySnapshot.docs

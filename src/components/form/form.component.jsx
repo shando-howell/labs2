@@ -11,11 +11,13 @@ function Form() {
   const addNote = async (e) => {
     e.preventDefault();
 
+    // Add note to the Firestore database
     try {
       const docRef = await addDoc(collection(db, "notes"), {
         note: note,
       });
       console.log("Document written with ID:", docRef.id);
+      // Add reset form field logic here
     } catch (e) {
       console.log("Error adding document: ", e)
     }
@@ -29,7 +31,11 @@ function Form() {
           className='form-input' 
           onChange={(e)=>setNote(e.target.value)}
         />
-        <button type="submit" onClick={addNote}>Submit</button>
+        <button 
+          type="submit" 
+          onClick={addNote}
+          className="button"
+        >Submit</button>
     </>
   );
 }

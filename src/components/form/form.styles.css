@@ -1,3 +1,13 @@
 .form-input {
     margin: 1rem;
 }
+
+.button {
+    padding: 8px;
+    background-color: #dad1c0;
+    color: #282c34;
+}
+.button:hover {
+    background-color: #282c34;
+    color:#dad1c0;
+}
