@@ -7,7 +7,7 @@ function App() {
   return (
     <>
         <Header/>
-        <h1>Labs</h1>
+        <h1>G Code</h1>
         <Notes/>
     </>
   )
