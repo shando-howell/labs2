@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/labs2/static/css/main.a47cf5a2.css",
-    "main.js": "/labs2/static/js/main.071b4f10.js",
+    "main.js": "/labs2/static/js/main.7a85f729.js",
     "static/js/453.7c88a1cd.chunk.js": "/labs2/static/js/453.7c88a1cd.chunk.js",
     "static/media/harley-quinn.jpg": "/labs2/static/media/harley-quinn.b10e330d2c55ee1bdc7a.jpg",
     "index.html": "/labs2/index.html",
     "main.a47cf5a2.css.map": "/labs2/static/css/main.a47cf5a2.css.map",
-    "main.071b4f10.js.map": "/labs2/static/js/main.071b4f10.js.map",
+    "main.7a85f729.js.map": "/labs2/static/js/main.7a85f729.js.map",
     "453.7c88a1cd.chunk.js.map": "/labs2/static/js/453.7c88a1cd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a47cf5a2.css",
-    "static/js/main.071b4f10.js"
+    "static/js/main.7a85f729.js"
   ]
 }
